@@ -3,15 +3,17 @@
 ## How to use
 First, define an object with the class `nextion(tx_pin, rx_pin, baudrate)`
 This could look like this now:<br>
-`from nextion import nextion<br>
-display = nextion(13, 12, 9600)`<br>
+```
+from nextion import nextion
+display = nextion(13, 12, 9600) 
+```
 Now you can control the device with different commands.
 ## Constants
 - `nextion.WRITE_ONLY`
 - `nextion.READ_AND_WRITE`
 ## Functions
 ### cmd
-You can send a command over serial to the device using `display.cmd(command`[ , flags=nextion.READ_AND_WRITE])`<br>
+You can send a command over serial to the device using `display.cmd(command[,flags=nextion.READ_AND_WRITE])`<br>
 - `command`: the command to send to the device
 - `flags`: You can insert `nextion.WRITE_ONLY`, when you don't want to read the reply from UART. By default, the function is waiting 100 ms and then, the function returns the reply.
 ### sleep
