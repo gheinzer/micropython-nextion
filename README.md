@@ -15,7 +15,7 @@ Now you can control the device with different commands.
 ### cmd
 You can send a command over serial to the device using `display.cmd(command[,flags=nextion.READ_AND_WRITE])`<br>
 - `command`: the command to send to the device
-- `flags`: You can insert `nextion.WRITE_ONLY`, when you don't want to read the reply from UART. By default, the function is waiting 100 ms and then, the function returns the reply.
+- `flags`: You can insert `nextion.WRITE_ONLY`, when you don't want to read the reply from UART. By default, the function is waiting 100 ms and then, the function returns the reply.(optional)
 ### sleep
 To enter or exit sleep mode of the nextion device, use the command `display.sleep(state)`<br>
 - `state`: Set the parameter to 1 for enter sleep mode. Set the parameter to 0 for exit sleep mode.
