@@ -1,3 +1,5 @@
 from nextion import nextion
+import time
+time.sleep(1)
 display = nextion(12, 13, 9600)
-display.cmd('t0.txt="Its running!"')
+display.page(1)

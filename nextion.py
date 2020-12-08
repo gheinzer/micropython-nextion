@@ -21,5 +21,5 @@ class nextion:
     def reset(self):
         self.cmd("rest")
     def brightness(self, brightness):
-        self.cmd("dim=" + brightness)
+        self.cmd("dim=" + str(brightness))
     
