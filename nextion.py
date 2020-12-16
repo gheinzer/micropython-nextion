@@ -22,4 +22,5 @@ class nextion:
         self.cmd("rest")
     def brightness(self, brightness):
         self.cmd("dim=" + str(brightness))
-    
+    def read(self):
+        return self.uart.read()

@@ -25,3 +25,5 @@ You can reset the device using the command `display.reset()`
 ### brightness
 To set the display brightness use the command `display.brightness(brightness)`<br>
 - `brightness`: Brightness to set in percent
+### read
+You can read bytes from serial with the command `display.read()`
