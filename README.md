@@ -3,8 +3,10 @@
 ## How to use
 First, define an object with the class `nextion(tx_pin, rx_pin, baudrate)`
 This could look like this now:<br>
-`from nextion import nextion<br>
-display = nextion(13, 12, 9600)`<br>
+```
+from nextion import nextion
+display = nextion(13, 12, 9600) 
+```
 Now you can control the device with different commands.
 ## Constants
 - `nextion.WRITE_ONLY`
