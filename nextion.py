@@ -4,6 +4,8 @@ import time
 class nextion:
     WRITE_ONLY = 0
     WRITE_AND_READ = 1
+    DECODE = 1
+    RAW = 0
     def __init__(self, tx_pin, rx_pin, baudrate):
         self.uart = UART(1, baudrate, tx=tx_pin, rx=rx_pin)
         self.uart.init(baudrate, bits=8, parity=None, stop=1)
@@ -22,5 +24,11 @@ class nextion:
         self.cmd("rest")
     def brightness(self, brightness):
         self.cmd("dim=" + str(brightness))
-    def read(self):
-        return self.uart.read()
+    def read(self, flags=self.RAW):
+        if(flags == self.RAW):
+            return self.uart.read()
+        else:
+            output = self.uart.read()
+            output = bytearray(output).decode("ASCII")
+            return output
+
