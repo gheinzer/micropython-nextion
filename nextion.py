@@ -24,11 +24,14 @@ class nextion:
         self.cmd("rest")
     def brightness(self, brightness):
         self.cmd("dim=" + str(brightness))
-    def read(self, flags=self.RAW):
-        if(flags == self.RAW):
+    def read(self, flags=0):
+        if(flags == 0):
             return self.uart.read()
         else:
             output = self.uart.read()
-            output = bytearray(output).decode("ASCII")
-            return output
-
+            if(not output is None):
+                #output.replace("\xFF\xFF\xFF", "")
+                output = bytearray(str(output)).decode("ascii")
+                return output
+            else:
+                return None
