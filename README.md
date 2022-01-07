@@ -1,5 +1,5 @@
 # micropython nextion library
- This library will help you control you nextion-display over UART.
+ This library could help you control you nextion-display over UART.
 ## How to use
 First, define an object with the class `nextion(tx_pin, rx_pin, baudrate)`
 This could look like this now:<br>
