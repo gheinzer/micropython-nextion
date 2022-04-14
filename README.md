@@ -32,3 +32,5 @@ To set the display brightness use the command `display.brightness(brightness)`<b
 ### read
 You can read bytes from serial with the command `display.read([flags=nextion.RAW])`
 - `flags`: Optional. You can set the `flags` parameter to `nextion.DECODE`, if you want the function to decode the output of the displays. If you don't want to have the data ASCII encoded, you can insert `nextion.RAW`. Default is `nextion.RAW`.
+
+Note that this returns `None` if nothing is there to be read.
